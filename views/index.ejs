@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+</head>
+
+<body>
+    <header>
+        <h1>Home</h1>
+    </header>
+    <main>
+        <%data.forEach(val=>{%>
+        <h2><%=val.name%></h2>
+        <img src="<%=val.image%>" alt="">
+        <h4><%=val.level%></h4>
+        <div>
+            <form action="/fav" method="GET">
+                <input type="hidden" name="name" value="<%=val.name%>">
+                <input type="hidden" name="image" value="<%=val.image%>">
+                <input type="hidden" name="level" value="<%=val.level%>">
+                <input type="submit" value="ADD TO FAVOURIT">
+            </form>
+        </div>
+        <%})%>
+    </main>
+
+</body>
+
+</html>

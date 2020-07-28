@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favourit</title>
+</head>
+<body>
+    <header><h1>My Favourit</h1></header>
+    <main>
+        <%data.forEach(val=>{%>
+            <h2><%=val.name%></h2>
+            <img src="<%=val.image%>" alt="">
+            <h4><%=val.level%></h4>
+            <a href="details/<%=val.id%>"><button>Show Details</button></a>
+            <%})%>
+    </main>
+    
+</body>
+</html>
